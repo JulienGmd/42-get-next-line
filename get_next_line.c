@@ -6,7 +6,7 @@
 /*   By: jgrimaud <jgrimaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 22:14:16 by jgrimaud          #+#    #+#             */
-/*   Updated: 2023/11/23 01:53:07 by jgrimaud         ###   ########.fr       */
+/*   Updated: 2023/12/14 07:34:48 by jgrimaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -180,13 +180,13 @@ ssize_t	ft_read(int fd, t_buf *buf, char *saved)
 
 char	*get_next_line(int fd)
 {
-	static char	saved[FOPEN_MAX][BUFFER_SIZE]; // TODO utiliser FOPEN_MAX ? // TODO init ?
+	static char	saved[1024][BUFFER_SIZE]; // TODO utiliser FOPEN_MAX ? // TODO init ?
 	t_buf		buf;
 	ssize_t		num_read;
 	char		*line;
 
-	if (fd < 0 || fd >= FOPEN_MAX)
-		return (NULL);
+	if (read(fd, NULL, 0) < 0)
+		return (saved[fd][0] = '\0', NULL);
 	buf.str = NULL;
 	buf.len = 0;
 	buf.max_len = 0;
