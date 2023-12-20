@@ -6,7 +6,7 @@
 /*   By: jgrimaud <jgrimaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 22:14:16 by jgrimaud          #+#    #+#             */
-/*   Updated: 2023/12/14 12:49:59 by jgrimaud         ###   ########.fr       */
+/*   Updated: 2023/12/20 21:06:42 by jgrimaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
  * Initialize buf with saved.
  * @return true if success, false if BUFFER_SIZE <= 0 or fd is invalid.
 */
-bool	init(int fd, char *saved, t_buf *buf)
+static bool	init(int fd, char *saved, t_buf *buf)
 {
 	if (BUFFER_SIZE <= 0)
 		return (false);
@@ -41,7 +41,7 @@ bool	init(int fd, char *saved, t_buf *buf)
  * not been called yet.
  * @return true if a line has been extracted, false otherwise.
 */
-bool	ft_tryextractline(t_buf *buf, char *saved, ssize_t num_read)
+static bool	ft_tryextractline(t_buf *buf, char *saved, ssize_t num_read)
 {
 	size_t	i;
 
@@ -65,7 +65,7 @@ bool	ft_tryextractline(t_buf *buf, char *saved, ssize_t num_read)
  * @return The number of bytes read, or -1 if an error occurred, or -2 if
  * ft_realloc failed.
 */
-ssize_t	ft_read(int fd, t_buf *buf)
+static ssize_t	ft_read(int fd, t_buf *buf)
 {
 	ssize_t	num_read;
 
