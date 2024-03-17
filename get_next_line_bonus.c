@@ -6,11 +6,11 @@
 /*   By: jgrimaud <jgrimaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 22:14:16 by jgrimaud          #+#    #+#             */
-/*   Updated: 2023/12/20 21:06:37 by jgrimaud         ###   ########.fr       */
+/*   Updated: 2024/01/04 23:47:56 by jgrimaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 /**
  * Initialize buf with saved.

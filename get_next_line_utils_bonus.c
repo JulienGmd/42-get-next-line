@@ -6,11 +6,11 @@
 /*   By: jgrimaud <jgrimaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 08:07:46 by jgrimaud          #+#    #+#             */
-/*   Updated: 2023/12/14 12:50:41 by jgrimaud         ###   ########.fr       */
+/*   Updated: 2024/01/04 23:47:53 by jgrimaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 size_t	ft_strlen(const char *s)
 {
